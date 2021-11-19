@@ -1,20 +1,35 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content class="ion-padding">
+  <ion-buttons>
+    <ion-menu-button menu="main-menu"></ion-menu-button>
+  </ion-buttons>
+  <ion-searchbar
+  placeholder= 'Buscador'
+  [(ngModel)]="searchTerm"
+  showCancelButton="focus"
+  animated style="color: #CFBB3B;">
+</ion-searchbar>
+  <ion-item *ngFor="let provedors of provedors | filter:searchTerm">
+    <center>
+  <ion-card style="margin: 10px;">
+   <ion-item>
+      <ion-avatar style="margin-top: 10px;"  slot="start">
+        <img style="margin: 10px, 0px,10px, 0px ;" src= "{{provedors.icono}}">
+      </ion-avatar>
+       <ion-title style="color: #CFBB3B;  margin: 10px, 0px,10px, 0px ;" slot=start><H4> {{provedors.nombre}}</H4>
+       <ion-text >{{provedors.tipo}}</ion-text></ion-title>
+   </ion-item>
+   <ion-item>
+        <ion-img style="margin: 10px;" width="40" height="40" src="https://asclepion.com/wp-content/uploads/2014/10/Asclepion-Laser-Technologies-Services-and-Support.jpg"></ion-img>
+    </ion-item>
+    <ion-item>
+      <p>{{provedors.descripcion}}</p>
+    </ion-item>
+    <ion-item >
+        <ion-icon style="color: #CFBB3B;" name="location-outline" slot="start"></ion-icon>
+        <ion-label>{{provedors.ubicacion}}</ion-label>
+        <ion-button style="margin: 10px;"  slot="end"  color="success" size="large"  href="contact"><ion-icon name="logo-whatsapp"></ion-icon></ion-button>
+    </ion-item>
+    </ion-card>
+  </center>
+  </ion-item>
 </ion-content>

@@ -1,0 +1,29 @@
+<!-- Encabezado -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Contacto</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+ <!-- Contenido -->
+<ion-content>
+  <!-- Formulario -->
+  <ion-item style=" margin: 5px;" >
+    <ion-label position="stacked">{{nom || Dormamu}}</ion-label>
+    <ion-label position="stacked">Nombre</ion-label>
+    <ion-input [(ngModel)]="nom"></ion-input>
+  </ion-item>
+  <ion-item style=" margin: 5px;" >
+    <ion-label position="stacked">Asunto</ion-label>
+    <ion-input [(ngModel)]="asu"></ion-input>
+  </ion-item>
+  <ion-item style=" margin: 5px;" >
+    <ion-label position="stacked">Descripcion</ion-label>
+    <ion-input [(ngModel)]="des"></ion-input>
+  </ion-item>
+ 
+  <ion-button color="success" style=" margin: 20px;" expand="block" href="{{url}}" (click)="prueba()" >Enviar</ion-button>
+</ion-content>
