@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -6,14 +6,19 @@ import {Router} from '@angular/router';
   templateUrl: './bienvenida.page.html',
   styleUrls: ['./bienvenida.page.scss'],
 })
-export class BienvenidaPage implements OnInit {
+export class BienvenidaPage  {
 
   constructor( private router: Router) { }
 
-  ngOnInit() {
-  }
+
 
   goIncioSession(){
     this.router.navigate(['/login'])
+  }
+  goIncioRegistro(){
+    this.router.navigate(['/register'])
+  }
+  goIncioRegistroComun(){
+    this.router.navigate(['/registro-comun'])
   }
 }

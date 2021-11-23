@@ -10,4 +10,8 @@ export class AppComponent {
   goLogin(){
     this.router.navigate(['/login'])
   }
+  goPerfil(){
+    this.router.navigate(['/perfil'])
+  }
+  
 }

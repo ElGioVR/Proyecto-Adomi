@@ -2,26 +2,26 @@
 
 <ion-content>
   <center>
-     <h1 style=" margin: 20px;">Iniciar Session</h1>
-    <img src="https://blogapi.uber.com/wp-content/uploads/2021/03/Captura-de-Pantalla-2021-04-26-a-las-18.48.26.png" style="width: 70%; height: 200px;">
+
+    <img src="assets/img/login.png" style="width: 90%; height: 270px;">
   </center>
 
   <ion-item>
-    <ion-label type="email" position="floating">Correo</ion-label>
+    <ion-label type="email" style="color: #3880FF;" position="floating">Correo</ion-label>
     <ion-input></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label type="new-password" position="floating">Contraseña</ion-label>
+    <ion-label  type="password"  style="color: #3880FF;  " position="floating">Contraseña</ion-label>
     <ion-input></ion-input>
   </ion-item>
   <center>
-    <ion-button style="width: 80%; margin-top: 20px;"  expand="block" (click)="goHome()">Iniciar</ion-button>
-    <ion-button style="width: 80%; margin-top: 20px;"  color="danger" expand="block"> <ion-icon name="logo-google"></ion-icon> mail</ion-button>
-  </center>
-
-  <center>
-    <h3>Ó</h3>
+    <ion-button style="width: 80%; margin-top: 20px;"  expand="block" (click)="goHome()">Iniciar sesion</ion-button>
  
-  <ion-button style="width: 80%; margin-top: 20px;" expand="block">Registrarse</ion-button>
+  </center>
+
+  <center>
+    <h1 style="margin-top: 100px;"></h1>
+
+  <h10 style="color: #555;  " >Aun no tienes cuenta?, <h10 style="color: #3880FF;  " (click)="goIncioSession()">Registrate</h10></h10>
 </center>
 </ion-content>

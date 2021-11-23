@@ -28,6 +28,18 @@ const routes: Routes = [
     path: 'contact',
     loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
   },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'registro-comun',
+    loadChildren: () => import('./registro-comun/registro-comun.module').then( m => m.RegistroComunPageModule)
+  },
 ];
 
 @NgModule({

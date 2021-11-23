@@ -6,7 +6,7 @@
   placeholder= 'Buscador'
   [(ngModel)]="searchTerm"
   showCancelButton="focus"
-  animated style="color: #CFBB3B;">
+  animated style="color: #3880FF;">
 </ion-searchbar>
   <ion-item *ngFor="let provedors of provedors | filter:searchTerm">
     <center>
@@ -15,7 +15,7 @@
       <ion-avatar style="margin-top: 10px;"  slot="start">
         <img style="margin: 10px, 0px,10px, 0px ;" src= "{{provedors.icono}}">
       </ion-avatar>
-       <ion-title style="color: #CFBB3B;  margin: 10px, 0px,10px, 0px ;" slot=start><H4> {{provedors.nombre}}</H4>
+       <ion-title style="color: #3880FF;  margin: 10px, 0px,10px, 0px ;" slot=start><H4> {{provedors.nombre}}</H4>
        <ion-text >{{provedors.tipo}}</ion-text></ion-title>
    </ion-item>
    <ion-item>
@@ -25,7 +25,7 @@
       <p>{{provedors.descripcion}}</p>
     </ion-item>
     <ion-item >
-        <ion-icon style="color: #CFBB3B;" name="location-outline" slot="start"></ion-icon>
+        <ion-icon style="color: #3880FF;" name="location-outline" slot="start"></ion-icon>
         <ion-label>{{provedors.ubicacion}}</ion-label>
         <ion-button style="margin: 10px;"  slot="end"  color="success" size="large"  href="contact"><ion-icon name="logo-whatsapp"></ion-icon></ion-button>
     </ion-item>

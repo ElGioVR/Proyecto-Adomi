@@ -14,4 +14,8 @@ export class LoginPage implements OnInit {
   goHome(){
     this.router.navigate(['/home'])
   }
+  goIncioSession(){
+    this.router.navigate(['/registro-comun'])
+  }
 }
+
