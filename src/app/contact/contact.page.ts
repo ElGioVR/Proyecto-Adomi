@@ -13,9 +13,11 @@ export class ContactPage {
   countrycode:string="52";
   whatsappnumber:string="6642040070";
   text:string="Como"
-  url:string="https://wa.me/"+this.countrycode+this.whatsappnumber+"?text=gio contratar tutor";
+  url:string="https://wa.me/"+this.countrycode+this.whatsappnumber+"?text='gio contratar tutor'";
   constructor() { }
   prueba(){
     console.log(this.nom);
+    console.log(this.asu);
+    console.log(this.des);
   }
 }

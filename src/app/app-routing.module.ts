@@ -25,7 +25,7 @@ const routes: Routes = [
     loadChildren: () => import('./bienvenida/bienvenida.module').then( m => m.BienvenidaPageModule)
   },
   {
-    path: 'contact',
+    path: 'contact/:id',
     loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
   },
   {
@@ -40,6 +40,11 @@ const routes: Routes = [
     path: 'registro-comun',
     loadChildren: () => import('./registro-comun/registro-comun.module').then( m => m.RegistroComunPageModule)
   },
+  {
+    path: 'service-perfil/:id',
+    loadChildren: () => import('./service-perfil/service-perfil.module').then( m => m.ServicePerfilPageModule)
+  },
+
 ];
 
 @NgModule({

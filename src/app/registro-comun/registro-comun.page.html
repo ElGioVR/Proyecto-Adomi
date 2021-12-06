@@ -6,30 +6,30 @@
 
   <ion-item>
     <ion-label type="email" style="color: #3880FF;" position="floating">Nombre</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="nombre"></ion-input>
   </ion-item>
   
   <ion-item>
     <ion-label type="email" style="color: #3880FF;" position="floating">Ubicacion</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="ubicacion"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label type="email" style="color: #3880FF;" position="floating">Correo</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="correo"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label type="new-password" style="color: #3880FF;  " position="floating">Contraseña</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="password"></ion-input>
   </ion-item>
   <center>
-    <ion-button style="width: 80%; margin-top: 20px;"  expand="block" (click)="goIncioSession()">Restrarme</ion-button>
+    <ion-button style="width: 80%; margin-top: 20px;"  expand="block" (click)="postDatos()">Restrarme</ion-button>
  
   </center>
 
   <center>
 
  <h1 style="margin-top: 20px;"></h1>
-  <h10 style="color: #555;  ">Quieres registrarte como un prestador de servicio?, <h10 style="color: #3880FF;  " (click)="Registro()">Registrate</h10></h10>
+  <h10 style="color: #555;  ">Quieres registrarte como un prestador de servicio?, <h10 style="color: #3880FF;  " (click)="register()">Registrate</h10></h10>
 </center>
 
 </ion-content>

@@ -10,8 +10,8 @@
 </ion-searchbar>
   <ion-item *ngFor="let provedors of provedors | filter:searchTerm">
     <center>
-  <ion-card style="margin: 10px;">
-   <ion-item>
+  <ion-card style="margin: 10px;" [routerLink]="['/service-perfil/' + provedors.id]">
+   <ion-item >
       <ion-avatar style="margin-top: 10px;"  slot="start">
         <img style="margin: 10px, 0px,10px, 0px ;" src= "{{provedors.icono}}">
       </ion-avatar>
@@ -27,7 +27,7 @@
     <ion-item >
         <ion-icon style="color: #3880FF;" name="location-outline" slot="start"></ion-icon>
         <ion-label>{{provedors.ubicacion}}</ion-label>
-        <ion-button style="margin: 10px;"  slot="end"  color="success" size="large"  href="contact"><ion-icon name="logo-whatsapp"></ion-icon></ion-button>
+    
     </ion-item>
     </ion-card>
   </center>
