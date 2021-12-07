@@ -9,12 +9,15 @@ import { HttpClient} from '@angular/common/http';
 export class ServicePerfilPage implements OnInit {
 
   perfilId: string;
-  provedors;
+   provedors;
   constructor(private activatedRoute: ActivatedRoute, private httpClient: HttpClient ) { }
 
   ngOnInit() {
     this.perfilId = this.activatedRoute.snapshot.paramMap.get('id');
-    this.httpClient.get('http://serfacil.atwebpages.com/servicioController.php?id='+ this.perfilId).subscribe(res =>this.provedors= res);
+    this.httpClient.get('http://serfacil.atwebpages.com/servicioController.php?id='+ this.perfilId).subscribe(res =>{
+      this.provedors = [res];
+      console.log(this.provedors);
+    });
   }
 
 }

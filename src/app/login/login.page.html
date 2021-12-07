@@ -6,16 +6,18 @@
     <img src="assets/img/login.png" style="width: 90%; height: 270px;">
   </center>
 
+
   <ion-item>
-    <ion-label type="email" style="color: #3880FF;" position="floating">Correo</ion-label>
-    <ion-input></ion-input>
+    <ion-input type="email" position="floating" placeholder="Email"  required></ion-input>
+
   </ion-item>
   <ion-item>
-    <ion-label  type="password"  style="color: #3880FF;  " position="floating">Contraseña</ion-label>
-    <ion-input></ion-input>
+    <ion-input  name="password" placeholder="Contraseña" [type]="showPassword ? 'text' : 'password'" position="floating"></ion-input>
+    <ion-icon slot="end"  (click)=" togglePassword()" [name]="passwordToggleIcon"> </ion-icon>
+
   </ion-item>
   <center>
-    <ion-button style="width: 80%; margin-top: 20px;"  expand="block" (click)="goHome()">Iniciar sesion</ion-button>
+    <ion-button style="width: 80%; margin-top: 20px;"   type="submit"  expand="block" (click)="goHome()">Iniciar</ion-button>
  
   </center>
 

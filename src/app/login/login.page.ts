@@ -7,15 +7,24 @@ import {Router} from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
+  showPassword=false;
+  passwordToggleIcon='eye';
+
   constructor( private router: Router) { }
+
+  togglePassword(): void{
+    this.showPassword= !this.showPassword;
+    if(this.passwordToggleIcon == 'eye'){
+      this.passwordToggleIcon='eye-off';
+    }else{
+      this.passwordToggleIcon='eye';
+    }
+    }
 
   ngOnInit() {
   }
   goHome(){
-    this.router.navigate(['/home'])
-  }
-  goIncioSession(){
-    this.router.navigate(['/registro-comun'])
+    this.router.navigate(['/home']);
   }
 }
 
